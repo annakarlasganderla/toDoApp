@@ -5,6 +5,19 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'to-do-app';
+
+  public tarefa = " ";
+  public items = [];
+
+  addTarefa() {
+    this.items.push(this.tarefa);
+  }
+
+  removeTarefa(item) {
+    this.items.splice(this.items.indexOf(item), 1) // encontra a posição do array da determinada palavra que ele precisa encontrar
+  }
+
+
 }
