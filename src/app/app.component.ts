@@ -13,10 +13,16 @@ export class AppComponent {
 
   addTarefa() {
     this.items.push(this.tarefa);
+
+    this.limparCampo();
   }
 
   removeTarefa(item) {
     this.items.splice(this.items.indexOf(item), 1) // encontra a posição do array da determinada palavra que ele precisa encontrar
+  }
+
+  limparCampo() {
+    this.tarefa = " ";
   }
 
 }
